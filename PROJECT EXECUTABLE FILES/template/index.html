@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width",initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Video Category prediciton</title>
+    <style>
+      body {
+        background: url("static/robo.jpg") center;
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: sticky;
+      }
+      h1 {
+        color: rgb(236, 11, 11);
+      }
+      .btn {
+        margin-top: 20px;
+        padding: 3px;
+        background-color: azure;
+        font-size: larger;
+        color: rgb(17, 208, 214);
+        cursor: pointer;
+      }
+      form {
+        color: crimson;
+        align-content: center;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Video Category prediciton</h1>
+    <h2 style="color: rgb(76, 245, 14); text-align: center">Let's predict</h2>
+    <div class="inputs">
+      <form action="{{ url_for('predict')}}" method="post">
+        <label>description</label><br />
+        <input
+          type="text"
+          name="description"
+          placeholder="Enter description"
+        /><br />
+        <a href="result.html"
+          ><button class="btn" type="submit">Predict</button></a
+        >
+      </form>
+    </div>
+
+    <br /><br />
+    <section>
+      <h3 style="color: blueviolet; text-align: center">
+        {{ prediction_text }}
+      </h3>
+    </section>
+  </body>
+</html>

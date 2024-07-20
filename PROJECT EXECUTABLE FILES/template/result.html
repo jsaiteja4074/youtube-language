@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>result</title>
+    <style>
+      body {
+        background-color: darkgrey;
+      }
+      .output {
+        padding: 20px;
+        border: 1px solid red;
+        text-align: center;
+        color: rgb(124, 0, 241);
+        font-style: italic;
+        font-size: larger;
+      }
+      .result {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <h3 class="output">{{ prediction_text }}</h3>
+    <img class="result" src="static/mle.jpg" alt="prediction" width="200" />
+  </body>
+</html>
